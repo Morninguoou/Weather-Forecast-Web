@@ -70,3 +70,75 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.loader {
+  width: 50px;
+  --b: 8px; 
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%,#f03355) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+    radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+          mask-composite: intersect;
+  animation:l4 1s infinite steps(10);
+}
+@keyframes l4 {to{transform: rotate(1turn)}}
+
+.progress {
+  background: linear-gradient(
+    90deg,
+    rgba(58, 110, 180, 1) 0%,
+    rgba(126, 212, 87, 1) 20%,
+    rgba(248, 212, 73, 1) 40%,
+    rgba(235, 77, 96, 1) 60%,
+    rgba(180, 96, 231, 1) 80%,
+    rgb(66, 30, 166) 100%
+  );
+}
+
+.temperature {
+  background-image: linear-gradient(to right, #00aaff 0%, #00f9ff 20%,rgb(255, 225, 0), rgb(255, 111, 0));
+}
+
+@media screen and (max-width: 581px) {
+  .btn-group {
+    position: fixed;
+    bottom: 2%;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .btn-group button {
+    box-shadow: 2px 3px 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  .search-btn button {
+    width: 100%;
+  }
+
+  .source-code-btn {
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .mapbox-con {
+    flex-direction: column;
+  }
+
+  .mapbox-con > div:first-child {
+    height: 24rem;
+    flex: initial;
+  }
+}

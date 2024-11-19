@@ -6,9 +6,11 @@ import { useRouter } from 'next/navigation'
 import { github } from '../utils/icons';
 import ThemeDropdown from './ThemeDropdown/ThemeDropdown';
 import SearchDialog from './SearchDialog/SearchDialog';
+import { useGlobalContext } from '../context/globalContext';
 
 function Navbar() {
     const router = useRouter();
+    const { state } = useGlobalContext();
 
     return (
       <div className='w-full py-4 flex items-center justify-between'>
@@ -18,8 +20,7 @@ function Navbar() {
           <div className="btn-group flex items-center gap-2">
             <ThemeDropdown/>
             <Button className='source-code flex items-center gap-2' onClick={() => {
-              //TODO: github link
-              router.push("https://www.google.co.th/?gws_rd=cr,ssl")
+              router.push("https://github.com/Morninguoou/Weather-Forecast-Web-App.git")
             }}>{github}Source Code</Button>
           </div>
         </div>
@@ -28,5 +29,3 @@ function Navbar() {
 }
 
 export default Navbar
-
-//!30:25
