@@ -10,7 +10,7 @@ function FiveDayForecast() {
 
     const {city, list} = fiveDaysForecast;
 
-    if (!fiveDaysForecast || !city || ! list) {
+    if (!fiveDaysForecast || !city || !list) {
         return <Skeleton className="h-[12rem] w-full col-span-2 md:col-span-full" />
     }
 

@@ -1,6 +1,6 @@
 'use client'
 import { useGlobalContext } from '@/app/context/globalContext'
-import { sun, thermo } from '@/app/utils/icons';
+import { thermo } from '@/app/utils/icons';
 import { Skeleton } from '@/components/ui/skeleton';
 import React from 'react'
 import { UvProgress } from './UvProgress';
@@ -13,7 +13,7 @@ function UvIndex() {
   }
 
   const { daily } = uvIndex;
-  const { uv_index_clear_sky_max, uv_index_max } = daily;
+  const { uv_index_max } = daily;
 
   const uvIndexMax = uv_index_max[0].toFixed(0);
 

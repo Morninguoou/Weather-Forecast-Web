@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { useGlobalContext } from '@/app/context/globalContext';
-import { clearSky, cloudy, drizzleIcon, navigation, rain, snow } from '@/app/utils/icons';
+import { clearSky, cloudy, drizzleIcon, rain, snow } from '@/app/utils/icons';
 import { kelvinToCelsius } from '@/app/utils/misc';
 import moment from 'moment';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -10,11 +10,9 @@ import { Skeleton } from '@/components/ui/skeleton';
 function Temperature() {
   const { forecast } = useGlobalContext();
 
-  // Hooks must always run unconditionally
   const [localTime, setLocalTime] = useState<string>('');
   const [currentDay, setCurrentDay] = useState<string>('');
 
-  // Provide defaults to avoid destructure errors when forecast is undefined
   const { main = {}, timezone = 0, name = '', weather = [] } = forecast || {};
   const { temp, temp_min, temp_max } = main || {};
   const { main: weatherMain = '', description = '' } = weather[0] || {};
@@ -50,7 +48,6 @@ function Temperature() {
     return () => clearInterval(interval);
   }, [timezone]);
 
-  // Render fallback if forecast or weather data is not available
   if (!forecast || !weather.length) {
     return <Skeleton className="h-[12rem] w-full col-span-2 md:col-span-full" />;
   }
@@ -66,7 +63,6 @@ function Temperature() {
       </p>
       <p className="pt-4 font-semibold flex gap-1 justify-center">
         <span className="text-4xl">{name}</span>
-        {/* <span>{navigation}</span> */}
       </p>
       <p className="py-10 text-9xl font-semibold self-center flex items-center">
         <span>{kelvinToCelsius(temp)}°</span>

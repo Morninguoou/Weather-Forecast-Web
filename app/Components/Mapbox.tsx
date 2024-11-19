@@ -24,7 +24,7 @@ function FlyToActiveCity({ activeCityCoords }) {
 
 function Mapbox() {
   const { forecast } = useGlobalContext();
-  const [activeCityCoords, setActiveCityCoords] = useState({ lat: 40.7128, lon: -74.006 });
+  const [ activeCityCoords, setActiveCityCoords ] = useState({ lat: 40.7128, lon: -74.006 });
 
   useEffect(() => {
     // เช็คว่า forecast มีค่าพิกัดหรือยัง

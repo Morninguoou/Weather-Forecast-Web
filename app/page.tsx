@@ -54,11 +54,10 @@ export default function Home() {
         </div>
       </div>
       <footer className="py-6 flex justify-center pb-8">
-        <p className="footer-text text-sm flex items-center gap-1">
+        <p className="footer-text text-sm font-semibold flex items-center gap-1">
           Made by Nirada
         </p>
       </footer>
     </main>
   );
 }
-

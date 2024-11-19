@@ -7,7 +7,6 @@ import { commandIcon } from "@/app/utils/icons";
 import { Button } from "@/components/ui/button";
 import { Command, CommandInput } from "@/components/ui/command";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { DialogTitle } from "@radix-ui/react-dialog";
 import React, { useEffect } from "react";
 
 
@@ -15,7 +14,7 @@ function SearchDialog() {
   const { geoCodedList, inputValue, handleInput } = useGlobalContext();
   const { setActiveCityCoords } = useGlobalContextUpdate();
 
-  const [hoveredIndex, setHoveredIndex] = React.useState<number>(0);
+  const [ hoveredIndex, setHoveredIndex ] = React.useState<number>(0);
 
   const getClickedCoords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
@@ -64,7 +63,7 @@ function SearchDialog() {
                       lat: number;
                       lon: number;
                     },
-                    index: number
+                    index: number,
                   ) => {
                     const { country, state, name } = item;
                     return (

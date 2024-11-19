@@ -17,13 +17,10 @@ function DailyForecast() {
     const { weather } = forecast;
     const { city, list } = fiveDaysForecast;
 
-    if (!fiveDaysForecast || !city || !list) {
+    if (!fiveDaysForecast || !city || !list || !forecast || !weather) {
         return <Skeleton className="h-[12rem] w-full col-span-2 md:col-span-full" />
     }
 
-    if (!forecast || !weather) {
-        return <Skeleton className="h-[12rem] w-full col-span-2 md:col-span-full" />
-    }
 
     const today = new Date();
     const todayString = today.toISOString().split("T")[0];

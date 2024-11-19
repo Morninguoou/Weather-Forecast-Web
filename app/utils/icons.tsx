@@ -9,7 +9,6 @@ import {
     Cloudy,
     Navigation,
     ThermometerSun,
-    Sunset,
     Wind,
     Gauge,
     Droplets,
