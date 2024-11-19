@@ -3,7 +3,7 @@ import { useGlobalContext } from '@/app/context/globalContext'
 import { sun, thermo } from '@/app/utils/icons';
 import { Skeleton } from '@/components/ui/skeleton';
 import React from 'react'
-import { UvProgress } from '../UvProgress/UvProgress';
+import { UvProgress } from './UvProgress';
 
 function UvIndex() {
   const {uvIndex} = useGlobalContext();

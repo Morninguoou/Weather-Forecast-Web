@@ -1,17 +1,17 @@
-import AirPollution from "./Components/AirPollution/AirPollution";
-import DailyForecast from "./Components/DailyForecast/DailyForecast";
-import FeelsLike from "./Components/FeelsLike/FeelsLike";
-import FiveDayForecast from "./Components/FiveDayForecast/FiveDayForecast";
-import Humidity from "./Components/Humidity/Humidity";
-import Mapbox from "./Components/Mapbox/Mapbox";
+import AirPollution from "./Components/AirPollution";
+import DailyForecast from "./Components/DailyForecast";
+import FeelsLike from "./Components/FeelsLike";
+import FiveDayForecast from "./Components/FiveDayForecast";
+import Humidity from "./Components/Humidity";
+import Mapbox from "./Components/Mapbox";
 import Navbar from "./Components/Navbar";
-import Population from "./Components/Population/Population";
-import Pressure from "./Components/Pressure/Pressure";
-import Sunrise from "./Components/Sunrise/Sunrise";
-import Sunset from "./Components/Sunset/Sunset";
-import Temperature from "./Components/Temperature/Temperature";
-import UvIndex from "./Components/UvIndex/UvIndex";
-import Visibility from "./Components/Visibility/Visibility";
+import Population from "./Components/Population";
+import Pressure from "./Components/Pressure";
+import Sunrise from "./Components/Sunrise";
+import Sunset from "./Components/Sunset";
+import Temperature from "./Components/Temperature";
+import UvIndex from "./Components/UvIndex";
+import Visibility from "./Components/Visibility";
 import defaultStates from "./utils/defaultStates";
 
 export default function Home() {
@@ -55,11 +55,10 @@ export default function Home() {
       </div>
       <footer className="py-6 flex justify-center pb-8">
         <p className="footer-text text-sm flex items-center gap-1">
-          Made by
+          Made by Nirada
         </p>
       </footer>
     </main>
   );
 }
 
-//!5:09:10

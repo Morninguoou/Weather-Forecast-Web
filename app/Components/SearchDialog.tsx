@@ -22,8 +22,8 @@ function SearchDialog() {
   };
 
   useEffect(() => {
-   console.log(geoCodedList, inputValue, handleInput)
-}, [inputValue]);
+      console.log(geoCodedList, inputValue, handleInput)
+  }, [inputValue]);
 
   return (
     <div className="search-btn">
@@ -42,7 +42,6 @@ function SearchDialog() {
         </DialogTrigger>
 
         <DialogContent className="p-0">
-          <DialogTitle>Search Cities</DialogTitle>
           <Command className=" rounded-lg border shadow-md">
             <CommandInput
               // value={inputValue}

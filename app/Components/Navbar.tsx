@@ -4,8 +4,8 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import { github } from '../utils/icons';
-import ThemeDropdown from './ThemeDropdown/ThemeDropdown';
-import SearchDialog from './SearchDialog/SearchDialog';
+import ThemeDropdown from './ThemeDropdown';
+import SearchDialog from './SearchDialog';
 import { useGlobalContext } from '../context/globalContext';
 
 function Navbar() {
