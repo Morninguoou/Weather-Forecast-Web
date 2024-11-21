@@ -36,10 +36,10 @@ function Pressure() {
         <h2 className="flex items-center gap-2 font-medium">
           {gauge} Pressure
         </h2>
-        <p className="pt-4 text-3xl">{pressure} hPa</p>
+        <p className="pt-4 text-3xl font-extrabold">{pressure} hPa</p>
       </div>
 
-      <p className="text-sm">{getPressureDescription(pressure)}.</p>
+      <p className="text-sm ">{getPressureDescription(pressure)}.</p>
     </div>
   );
 }

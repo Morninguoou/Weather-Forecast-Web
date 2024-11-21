@@ -84,7 +84,7 @@ function DailyForecast() {
                             {moment(forecast.dt_txt).format("HH:mm")}
                           </p>
                           <p>{getIcon()}</p>
-                          <p className="mt-2 font-md text-lg">
+                          <p className="mt-2 font-extrabold text-lg">
                             {kelvinToCelsius(forecast.main.temp)}°C
                           </p>
                         </CarouselItem>

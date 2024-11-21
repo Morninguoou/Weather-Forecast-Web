@@ -19,7 +19,7 @@ function Population() {
           <h2 className="flex items-center gap-2 font-semibold">
               {people} Population
           </h2>
-          <p className='pt-4 text-2xl'>
+          <p className='pt-4 text-2xl font-extrabold'>
             {formatNumber(city.population)}
           </p>
         </div>
